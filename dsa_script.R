@@ -1,0 +1,28 @@
+plot_example_1 <- function() {
+        par(mfcol = c(3,1), mar = c(4,4,1,0.5), mgp = c(1.5,0.5,0))
+        data1 <- read.table("out_rec_lin.txt",header = FALSE)
+        colnames(data1) <- c("length","ratio","time","mem")
+        with(data1, plot(time ~ length,type = "n", xlab = "String Length (characters)", ylab = "Time (nanoseconds)"))
+        with(data1, points(time ~ length, pch = 20, cex = 0.2, col = "black"))
+        title(sub = "a) Running time of algorithm")
+        title(main = "Example 1")
+        with(data1, plot(mem ~ length,type = "n", xlab = "String Length (characters)", ylab = "Change in Used Memory (bytes)"))
+        with(data1, points(mem ~ length, pch = 20, cex = 0.2, col = "black"))
+        title(sub  = "b) Change in memory used by the JVM")
+        with(data1, plot(ratio ~ length, pch = 20, cex = 0.2, col = "black", xlab = "String Length", ylab = "Ratio"))
+        title(sub = "c) Ratio between characters in string and characters to be removed") 
+}
+plot_example_2 <- function() {
+        par(mfcol = c(3,1), mar = c(4,4,1,0.5), mgp = c(1.5,0.5,0))
+        data1 <- read.table("out_rec2_lin.txt",header = FALSE)
+        colnames(data1) <- c("length","ratio","time","mem")
+        with(data1, plot(time ~ length,type = "n", xlab = "String Length (characters)", ylab = "Time (nanoseconds)", ylim = c(0,40000000)))
+        with(data1, points(time ~ length, pch = 20, cex = 0.2, col = "black"))
+        title(sub = "a) Running time of algorithm")
+        title(main = "Example 2")
+        with(data1, plot(mem ~ length,type = "n", xlab = "String Length (characters)", ylab = "Change in Used Memory (bytes)", ylim = c(-100000,40000000)))
+        with(data1, points(mem ~ length, pch = 20, cex = 0.2, col = "black"))
+        title(sub  = "b) Change in memory used by the JVM")
+        with(data1, plot(ratio ~ length, pch = 20, cex = 0.2, col = "black", xlab = "String Length", ylab = "Ratio", ylim = c(0.02,0.06)))
+        title(sub = "c) Ratio between characters in string and characters to be removed") 
+}
