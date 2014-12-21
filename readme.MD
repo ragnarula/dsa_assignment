@@ -7,6 +7,13 @@ Supporting data and analysis scripts
 3. `Main.java` Java source code used to generate the test data.
 4. `dsa_script.R` R analysis script used to generate plots from the test data.
 
+### Test Data Format
+##### Columns
+1. String Length (characters)
+2. Length/Characters removed (ratio)
+3. Execution Time (nano seconds)
+4. Change in JVM Memory Used (Bytes)
+
 ### Using The Script
 The script expects the test data files to be names as above and be located in the current workng directory.
 
