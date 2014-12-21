@@ -15,7 +15,7 @@ Supporting data and analysis scripts
 4. Change in JVM Memory Used (Bytes)
 
 ### Using The Script
-The script expects the test data files to be names as above and be located in the current workng directory.
+The script expects the test data files to be named as above and be located in the current workng directory.
 
 - `plot_example_1()` Creates the plots for the Example 1 data.
 - `plot_exampe_2()` Creares the plots for the Example 2 data. Lines 19, 23, and 26 set limits on the y-axis of the three plots to avoid showing outlying data.
